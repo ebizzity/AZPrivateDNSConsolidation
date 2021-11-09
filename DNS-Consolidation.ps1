@@ -1,8 +1,13 @@
 ﻿# Vars
-$ZoneToGroup = 'privatelink.blob.core.windows.net'
-# Resource Group where the destination DNS Zone is.
-$RGName = 'dnstest'
 
+# Zone Name to Consolidate ex: privatelink.blob.core.windows.net
+$ZoneToGroup = '<ZONE_NAME>'
+# Resource Group where the destination DNS Zone is.
+$RGName = '<RG_NAME>'
+$SubscriptionId = '<SUBSCRIPTION_ID>'
+
+#Connect-AzAccount
+#Set-AzContext -Subscription $SubscriptionId
 
 # Get Zones
 $zones = Get-AzPrivateDnsZone
